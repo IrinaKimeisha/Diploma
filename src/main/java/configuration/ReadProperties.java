@@ -38,4 +38,5 @@ public class ReadProperties {
     public static int timeout() {
         return Integer.parseInt(properties.getProperty("timeout"));
     }
+
 }

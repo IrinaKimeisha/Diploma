@@ -11,4 +11,5 @@ public class BasePage {
         this.driver = driver;
         waitsService = new WaitsService(driver);
     }
+
 }
