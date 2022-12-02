@@ -15,7 +15,7 @@
 
         <testng.version>7.6.1</testng.version>
         <webdrivermanager.version>5.2.1</webdrivermanager.version>
-        <lombok.version>1.18.10</lombok.version>
+        <!--lombok.version>1.18.10</lombok.version-->
         <allure.version>2.19.0</allure.version>
         <aspectj.version>1.9.5</aspectj.version>
     </properties>
@@ -34,11 +34,11 @@
             <version>${testng.version}</version>
         </dependency>
 
-        <dependency>
+        <!--dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
-        </dependency>
+        </dependency-->
 
         <dependency>
             <groupId>io.qameta.allure</groupId>
