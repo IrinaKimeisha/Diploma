@@ -1,15 +1,15 @@
 package baseEntities;
 
-import org.openqa.selenium.WebDriver;
-import services.WaitsService;
 
-public class BasePage {
-    protected WebDriver driver;
-    protected WaitsService waitsService;
+import com.codeborne.selenide.SelenideElement;
+import configuration.ReadProperties;
 
-    public BasePage(WebDriver driver) {
-        this.driver = driver;
-        waitsService = new WaitsService(driver);
+import static com.codeborne.selenide.Selenide.open;
+
+public abstract class BasePage {
+    protected abstract SelenideElement getPageIdentifier();
+
+    public void openPageByUrl(String pagePath) {
+        open(ReadProperties.getUrl() + pagePath);
     }
-
 }

@@ -19,6 +19,7 @@ public class DashboardPage {
     public void openPageByUrl() {
         open(pagePath);
     }
+
     // Блок атомарных методов
     public SelenideElement getHeaderTitleLabel() {
         return $(headerTitleLabelLocator);

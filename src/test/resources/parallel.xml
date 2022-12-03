@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+    <test thread-count="5" name="Diploma" parallel="methods">
+        <classes>
+            <class name="tests.ui.LoginTest">
+                <methods>
+                    <include name="successLoginTest"/>
+                </methods>
+            </class> <!-- tests.ui.LoginTest -->
+        </classes>
+    </test> <!-- Diploma -->
+</suite> <!-- Default Suite -->
+
+<!--настроить запуск тестов в парал режиме-->
