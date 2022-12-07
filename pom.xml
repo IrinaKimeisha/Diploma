@@ -14,8 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <testng.version>7.6.1</testng.version>
-        <webdrivermanager.version>5.2.1</webdrivermanager.version>
-        <lombok.version>1.18.10</lombok.version>
+        <!--lombok.version>1.18.10</lombok.version-->
         <allure.version>2.19.0</allure.version>
         <aspectj.version>1.9.5</aspectj.version>
     </properties>
@@ -23,22 +22,16 @@
     <dependencies>
 
         <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdrivermanager.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
         </dependency>
 
-        <dependency>
+        <!--dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
-        </dependency>
+        </dependency-->
 
         <dependency>
             <groupId>io.qameta.allure</groupId>
@@ -56,18 +49,6 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-selenide</artifactId>
             <version>2.19.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.30</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.18.0</version>
         </dependency>
 
         <dependency>
