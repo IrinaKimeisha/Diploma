@@ -4,14 +4,12 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import configuration.ReadProperties;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 import pages.AddProjectPage;
 import pages.DashboardPage;
 import pages.LoginPage;
-import steps.AddProjectStep;
-import steps.DashboardStep;
-import steps.LoginStep;
+import pages.ProjectOverviewPage;
+import steps.*;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
@@ -20,13 +18,16 @@ public class BaseTest {
     protected LoginStep loginStep;
     protected DashboardStep dashboardStep;
     protected AddProjectStep addProjectStep;
+    protected ProjectOverviewStep projectOverviewStep;
+    protected TestSuitesStep testSuitesStep;
 
     protected LoginPage loginPage;
     protected DashboardPage dashboardPage;
     protected AddProjectPage addProjectPage;
+    protected ProjectOverviewPage projectOverviewPage;
 
 
-    @BeforeMethod
+    @BeforeSuite
     public void setUp() {
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
@@ -35,7 +36,21 @@ public class BaseTest {
         Configuration.timeout = 8000;
     }
 
-    @AfterMethod
+    @BeforeClass
+    public void all() {
+        loginStep = new LoginStep();
+        dashboardStep = new DashboardStep();
+        addProjectStep = new AddProjectStep();
+        projectOverviewStep = new ProjectOverviewStep();
+        testSuitesStep = new TestSuitesStep();
+
+        dashboardPage = new DashboardPage();
+        loginPage = new LoginPage();
+    }
+
+
+    //сделать logOut добавить сюда
+    @AfterClass
     public void tearDown() {
         closeWebDriver();
     }

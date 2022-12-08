@@ -1,34 +1,43 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
+import baseEntities.BasePage;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.$x;
 
-public class DashboardPage {
-    private final static String pagePath = "index.php?/dashboard";
+public class DashboardPage extends BasePage {
+    private final static String pagePath = "/index.php?/dashboard";
 
-    // Блок описания селекторов для элементов
-    private final By headerTitleLabelLocator = By.xpath("//div[contains(text(), 'TestRail QA')]");
-    private final By addProjectButton = By.className("sidebar-projects-add");
+    //локаторы
+    private SelenideElement pageIdentifier = $x("//div[contains(@class, 'content-header-title') and contains(text(), 'All Projects')]");
+    private SelenideElement addProjectButton = $("#sidebar-projects-add");
+    private String openProjectByNameLocator = "//a[text()='Replace']";
+    private SelenideElement iconHeaderMail = $(".icon-header-mail");
+    private SelenideElement textIconHeaderMail = $(".top-social-link.link-tooltip:last-child");
 
-
-    // Блок инициализации страницы
-    public void openPageByUrl() {
-        open(pagePath);
+    //атомарные методы
+    public SelenideElement getPageIdentifier() {
+        return pageIdentifier;
     }
 
-    // Блок атомарных методов
-    public SelenideElement getHeaderTitleLabel() {
-        return $(headerTitleLabelLocator);
-    }
-    public boolean isHeaderTitleLabelDisplayed() {
-        return getHeaderTitleLabel().isDisplayed();
-    }
     public SelenideElement getAddProjectButton() {
-        return $(addProjectButton).shouldBe(Condition.visible);
+        return addProjectButton;
     }
 
+    public void openPageByUrl() {
+        super.openPageByUrl(pagePath);
+    }
+
+    public SelenideElement getOpenProjectByNameLocator(String projectName) {
+        return $x(openProjectByNameLocator.replace("Replace", projectName));
+    }
+
+    public SelenideElement getIconHeaderMail() {
+        return iconHeaderMail;
+    }
+
+    public SelenideElement getTextIconHeaderMail() {
+        return textIconHeaderMail;
+    }
 }

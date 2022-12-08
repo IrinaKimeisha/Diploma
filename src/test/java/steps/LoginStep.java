@@ -2,7 +2,6 @@ package steps;
 
 import baseEntities.BaseStep;
 import configuration.ReadProperties;
-import io.qameta.allure.Step;
 import pages.DashboardPage;
 import pages.LoginPage;
 

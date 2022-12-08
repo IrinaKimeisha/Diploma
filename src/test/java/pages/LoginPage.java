@@ -1,5 +1,6 @@
 package pages;
 
+import baseEntities.BasePage;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -7,9 +8,9 @@ import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class LoginPage{
+public class LoginPage extends BasePage {
 
-    // Описание селекторов
+    // локаторы
     private final By emailInputLocator = By.id("name");
     private final By pswInputLocator = By.id("password");
     private final By loginButtonLocator = By.id("button_primary");
@@ -53,7 +54,5 @@ public class LoginPage{
     public void clickLoginButton() {
         getLoginButton().click();
     }
-
-
 
 }
