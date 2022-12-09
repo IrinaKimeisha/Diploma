@@ -1,6 +1,6 @@
 package models;
 
-/*import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.SerializedName;
 import lombok.Builder;
 import lombok.Data;
 
@@ -20,4 +20,4 @@ public class Project {
     private boolean isCompleted;
 
     private int id;
-}*/
+}
