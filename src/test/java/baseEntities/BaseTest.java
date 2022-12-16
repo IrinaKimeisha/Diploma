@@ -5,21 +5,17 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import configuration.ReadProperties;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.testng.annotations.*;
-import pages.AddProjectPage;
-import pages.DashboardPage;
-import pages.LoginPage;
-import pages.ProjectOverviewPage;
+import pages.*;
 import steps.*;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-public class BaseTest {
+public abstract class BaseTest {
 
     protected LoginStep loginStep;
+    protected NavigationStep navigationStep;
     protected DashboardStep dashboardStep;
     protected AddProjectStep addProjectStep;
-    protected ProjectOverviewStep projectOverviewStep;
-    protected TestSuitesStep testSuitesStep;
 
     protected LoginPage loginPage;
     protected DashboardPage dashboardPage;
@@ -39,10 +35,9 @@ public class BaseTest {
     @BeforeClass
     public void all() {
         loginStep = new LoginStep();
+        navigationStep = new NavigationStep();
         dashboardStep = new DashboardStep();
         addProjectStep = new AddProjectStep();
-        projectOverviewStep = new ProjectOverviewStep();
-        testSuitesStep = new TestSuitesStep();
 
         dashboardPage = new DashboardPage();
         loginPage = new LoginPage();
