@@ -19,8 +19,6 @@ public abstract class BaseTest {
 
     protected LoginPage loginPage;
     protected DashboardPage dashboardPage;
-    protected AddProjectPage addProjectPage;
-    protected ProjectOverviewPage projectOverviewPage;
 
 
     @BeforeSuite
@@ -43,8 +41,6 @@ public abstract class BaseTest {
         loginPage = new LoginPage();
     }
 
-
-    //сделать logOut добавить сюда
     @AfterClass
     public void tearDown() {
         closeWebDriver();

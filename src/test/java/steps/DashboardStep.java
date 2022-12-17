@@ -10,10 +10,6 @@ public class DashboardStep extends BaseStep {
         return addProjectPage;
     }
 
-    public ProjectOverviewPage openProject(String projectName) {
-        dashboardPage.getOpenProjectByNameLocator(projectName).click();
-        return new ProjectOverviewPage();
-    }
 
     private void addProject() {
         dashboardPage.getAddProjectButton().click();

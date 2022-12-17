@@ -21,12 +21,6 @@ public class LoginStep extends BaseStep {
         return dashboardPage;
     }
 
-    public void emptyLogin(String psw) {
-        open(ReadProperties.getUrl());
-        loginPage.setPsw(psw);
-        loginPage.clickLoginButton();
-    }
-
     public LoginPage loginIncorrect(String wrongUsername, String wrongPsw) {
         login(wrongUsername, wrongPsw);
 
