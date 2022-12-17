@@ -9,7 +9,7 @@ import utils.EndPoints;
 import static io.restassured.RestAssured.given;
 
 public class SuitsApiTests extends BaseApiTest {
-    private int projectId = 2;
+    private int projectId = 7;
 
     @Test(description = "Get all suits test")
     public void getSuitesTest() {

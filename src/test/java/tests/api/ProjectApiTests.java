@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.is;
 
 public class ProjectApiTests extends BaseApiTest {
 
-    private int projectId = 2;
+    private int projectId = 6;
 
     @Test(description = "Get all projects test")
     public void getAllProjectsSimpleTest() {
@@ -59,13 +59,13 @@ public class ProjectApiTests extends BaseApiTest {
     @Test
     public void getExactProject() {
         given()
-                .pathParam("project_id", 3)
+                .pathParam("project_id", 4)
                 .get(EndPoints.GET_PROJECT)
                 .then()
                 .assertThat()
                 .statusCode(HttpStatus.SC_OK)
-                .body("id", is(3))
-                .body("name", equalTo("API"));
+                .body("id", is(4))
+                .body("name", equalTo("testUI"));
     }
 
     @Test
