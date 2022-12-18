@@ -17,4 +17,20 @@ public class AddProjectTest extends BaseTest {
                 .isDisplayed();
         navigationStep.navigateToDashboardFromProjectOverviewPage();
     }
+
+    @Test
+    public void dialogWindowTest() {
+        loginStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
+
+        dashboardStep.dialogWindow();
+    }
+
+    //переделать
+    @Test(description = "Delete Project Test")
+    public void deleteProjectTest() {
+        loginStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
+
+        dashboardStep.dialogWindow();
+        dashboardStep.deleteProject();
+    }
 }

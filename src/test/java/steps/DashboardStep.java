@@ -13,4 +13,17 @@ public class DashboardStep extends BaseStep {
     private void addProject() {
         dashboardPage.getAddProjectButton().click();
     }
+
+    public void dialogWindow(){
+        dashboardPage.clickAdministrationButton();
+        dashboardPage.clickProjectButton();
+        dashboardPage.clickDeleteButton();
+        dashboardPage.clickConfirmDeleteProjectButton();
+        dashboardPage.confirmDeleteProjectCheckBox();
+    }
+
+    public void deleteProject(){
+        dashboardPage.clickConfirmDeleteProjectButton();
+        dashboardPage.confirmDeleteProjectCheckBox();
+    }
 }
