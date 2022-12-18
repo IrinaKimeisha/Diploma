@@ -1,6 +1,9 @@
 package tests.api;
 
 import baseEntities.BaseApiTest;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import models.Project;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
@@ -9,12 +12,14 @@ import utils.EndPoints;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
-
+@Epic("API TESTING")
+@Feature("Project Tests")
 public class ProjectApiTests extends BaseApiTest {
 
     private int projectId = 6;
 
     @Test(description = "Get all projects test")
+    @Description("Get all projects test")
     public void getAllProjectsSimpleTest() {
         given()
                 .when()
@@ -26,6 +31,7 @@ public class ProjectApiTests extends BaseApiTest {
     }
 
     @Test(description = "Add project test")
+    @Description("Add project test")
     public void postProjectTest() {
         Project newProject = Project.builder()
                 .name("API test")
@@ -44,7 +50,8 @@ public class ProjectApiTests extends BaseApiTest {
 
     }
 
-    @Test
+    @Test(description = "Get reports test")
+    @Description("Get reports test")
     public void getReportsTest() {
         given()
                 .when()
@@ -56,7 +63,8 @@ public class ProjectApiTests extends BaseApiTest {
                 .statusCode(HttpStatus.SC_OK);
     }
 
-    @Test
+    @Test(description = "Get exact project test")
+    @Description("Get exact project test")
     public void getExactProject() {
         given()
                 .pathParam("project_id", 4)
@@ -68,7 +76,8 @@ public class ProjectApiTests extends BaseApiTest {
                 .body("name", equalTo("testUI"));
     }
 
-    @Test
+    @Test(description = "Get plans test")
+    @Description("Get plans test")
     public void getPlansApiTest() {
         given()
                 .when()

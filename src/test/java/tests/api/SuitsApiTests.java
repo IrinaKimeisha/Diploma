@@ -1,17 +1,22 @@
 package tests.api;
 
 import baseEntities.BaseApiTest;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import models.Suits;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 import utils.EndPoints;
 
 import static io.restassured.RestAssured.given;
-
+@Epic("API TESTING")
+@Feature("Suits Tests")
 public class SuitsApiTests extends BaseApiTest {
     private int projectId = 7;
 
     @Test(description = "Get all suits test")
+    @Description("Get all suits test")
     public void getSuitesTest() {
         given()
                 .when()
@@ -24,6 +29,7 @@ public class SuitsApiTests extends BaseApiTest {
     }
 
     @Test(description = "Add suits test")
+    @Description("Add suits test")
     public void postSuiteTest() {
         Suits newSuits = Suits.builder()
                 .name("Name of the suit ♠")
