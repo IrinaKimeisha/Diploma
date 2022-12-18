@@ -2,12 +2,17 @@ package tests.ui;
 
 import baseEntities.BaseTest;
 import configuration.ReadProperties;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 
-
+@Epic("UI TESTING")
+@Feature("Project Tests")
 public class AddProjectTest extends BaseTest {
 
     @Test(description = "Add project")
+    @Description("Adding Project Test")
     public void addProjectTest() {
         loginStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
         dashboardStep.successAddProject();
@@ -18,19 +23,11 @@ public class AddProjectTest extends BaseTest {
         navigationStep.navigateToDashboardFromProjectOverviewPage();
     }
 
-    @Test
-    public void dialogWindowTest() {
-        loginStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
-
-        dashboardStep.dialogWindow();
-    }
-
-    //переделать
     @Test(description = "Delete Project Test")
+    @Description("Deleting Project Test")
     public void deleteProjectTest() {
         loginStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
 
-        dashboardStep.dialogWindow();
         dashboardStep.deleteProject();
     }
 }

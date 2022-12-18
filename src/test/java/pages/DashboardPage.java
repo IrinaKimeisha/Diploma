@@ -19,7 +19,7 @@ public class DashboardPage extends BasePage {
     private SelenideElement deleteButtonLocator = $(By.className("icon-small-delete"));
     private SelenideElement projectButtonLocator = $("#navigation-sub-projects");
     private SelenideElement popUpMessageLocator = $x("//a[@class='link-tooltip']");
-    private SelenideElement confirmDeleteProjectCheckBoxLocator = $x("//div/div/div/div/div/label/input");//это изменить
+    private SelenideElement confirmDeleteProjectCheckBoxLocator = $x("//div/div/div/div/div/label/input");
     private SelenideElement confirmDeleteProjectButtonLocator = $x("//div/div/div/a[contains(text(), 'OK')]");
     private SelenideElement addTestSuiteButtonLocator = $x("//div[contains(@class, 'table summary summary-auto')]/div[1]//a[1][contains(text(), 'test suite')]");
 
