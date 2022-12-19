@@ -16,7 +16,7 @@ public class LoginPage extends BasePage {
     private final By loginButtonLocator = By.id("button_primary");
     private final By errorTextLocator = By.className("error-text");
     private final By pageIdentifier = By.className("logo-loginpage");
-    private final By loginPageMessage =By.className("loginPageMessage");
+    private final By loginPageMessage = By.className("loginpage-message");
 
     //блок атомарных методов
     public SelenideElement getEmailInput() {

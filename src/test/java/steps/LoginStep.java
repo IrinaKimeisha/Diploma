@@ -26,4 +26,10 @@ public class LoginStep extends BaseStep {
 
         return loginPage;
     }
+
+    public void emptyLogin(String psw) {
+        open(ReadProperties.getUrl());
+        loginPage.setPsw(psw);
+        loginPage.clickLoginButton();
+    }
 }

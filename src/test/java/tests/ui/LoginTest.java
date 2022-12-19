@@ -9,6 +9,8 @@ import io.qameta.allure.Feature;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.text;
+
 @Epic("UI TESTING")
 @Feature("Log In Tests")
 public class LoginTest extends BaseTest {
@@ -36,5 +38,12 @@ public class LoginTest extends BaseTest {
                 loginStep.loginIncorrect(ReadProperties.username(), "password")
                         .getErrorText().getText()
                 , "Email/Login or Password is incorrect. Please try again.");
+    }
+
+    @Test(description = "Empty UserName Test")
+    @Description("Empty UserName Test")
+    public void emptyUsernameTest() {
+        loginStep.emptyLogin(ReadProperties.password());
+        loginPage.getLoginPageMessage().shouldHave(text("Email/Login is required."));
     }
 }
