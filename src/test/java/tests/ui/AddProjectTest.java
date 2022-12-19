@@ -29,7 +29,7 @@ public class AddProjectTest extends BaseTest {
     @Test(description = "Delete Project Test")
     @Description("Deleting Project Test")
     public void deleteProjectTest() {
-        loginStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
+        loginStep.login(ReadProperties.username(), ReadProperties.password());
 
         dashboardStep.deleteProject();
     }

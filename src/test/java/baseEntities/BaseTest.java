@@ -30,7 +30,7 @@ public abstract class BaseTest {
         Configuration.timeout = 8000;
     }
 
-    @BeforeClass
+    @BeforeMethod
     public void all() {
         loginStep = new LoginStep();
         navigationStep = new NavigationStep();
@@ -41,7 +41,7 @@ public abstract class BaseTest {
         loginPage = new LoginPage();
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown() {
         closeWebDriver();
     }
