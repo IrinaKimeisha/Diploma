@@ -23,6 +23,9 @@ public class DashboardPage extends BasePage {
     private SelenideElement confirmDeleteProjectButtonLocator = $x("//div/div/div/a[contains(text(), 'OK')]");
     private SelenideElement addTestSuiteButtonLocator = $x("//div[contains(@class, 'table summary summary-auto')]/div[1]//a[1][contains(text(), 'test suite')]");
 
+    private SelenideElement iconHeaderMail = $(".icon-header-mail");
+    private SelenideElement textIconHeaderMail = $(".top-social-link.link-tooltip:last-child");
+
     //атомарные методы
     public SelenideElement getPageIdentifier() {
         return pageIdentifier;
@@ -87,5 +90,14 @@ public class DashboardPage extends BasePage {
 
     public void clickAddTestSuiteButton() {
         getAddTestSuiteButton().click();
+    }
+
+
+    public SelenideElement getIconHeaderMail() {
+        return iconHeaderMail;
+    }
+
+    public SelenideElement getTextIconHeaderMail() {
+        return textIconHeaderMail;
     }
 }
