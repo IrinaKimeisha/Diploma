@@ -12,11 +12,24 @@ import utils.EndPoints;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
+
 @Epic("API TESTING")
 @Feature("Project Tests")
 public class ProjectApiTests extends BaseApiTest {
 
     private int projectId = 6;
+
+    @Test(description = "Get all users test")
+    @Description("Get all users test")
+    public void getAllUsers() {
+        given()
+                .when()
+                .get(EndPoints.GET_All_USERS)
+                .then()
+                .log().status()
+                .log().body()
+                .statusCode(HttpStatus.SC_OK);
+    }
 
     @Test(description = "Get all projects test")
     @Description("Get all projects test")
