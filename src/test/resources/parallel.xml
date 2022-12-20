@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Main Suite" thread-count="5" parallel="tests">
+<suite name="Main Suite" thread-count="2" parallel="classes">
     <test name="UI">
         <classes>
             <class name="tests.ui.LoginTest"/>
@@ -14,5 +14,3 @@
         </classes>
     </test>
 </suite>
-
-        <!--это правильно вообще?-->
