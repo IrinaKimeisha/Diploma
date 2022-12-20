@@ -101,5 +101,4 @@ public class ProjectApiTests extends BaseApiTest {
                 .log().body()
                 .statusCode(HttpStatus.SC_OK);
     }
-
 }

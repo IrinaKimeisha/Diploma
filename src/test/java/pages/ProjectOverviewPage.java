@@ -11,11 +11,12 @@ public class ProjectOverviewPage extends BaseTest {
     //https://aqa21022.testrail.io/index.php?/projects/overview/2
     private SelenideElement pageIdentifier = $(".chart-line");
     private String tabLocator = "//li/a[. = 'Replace']";
-   private SelenideElement returnToDashboardButtonLocator = $("#navigation-dashboard");
+    private SelenideElement returnToDashboardButtonLocator = $("#navigation-dashboard");
 
     public SelenideElement getTabByName(String tabName) {
         return $x(tabLocator.replace("Replace", tabName));
     }
+
     public SelenideElement getReturnToDashboardButtonLocator() {
         return returnToDashboardButtonLocator;
     }

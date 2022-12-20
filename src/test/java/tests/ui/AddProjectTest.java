@@ -46,4 +46,5 @@ public class AddProjectTest extends BaseTest {
                 .perform();
         Assert.assertTrue(dashboardPage.getTextIconHeaderMail().isDisplayed());
     }
+
 }

@@ -46,4 +46,5 @@ public class LoginTest extends BaseTest {
         loginStep.emptyLogin(ReadProperties.password());
         loginPage.getLoginPageMessage().shouldHave(text("Email/Login is required."));
     }
+
 }

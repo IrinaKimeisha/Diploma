@@ -64,10 +64,6 @@ public class DashboardPage extends BasePage {
     }
 
 
-    public void clickAddProjectButton() {
-        getAddProjectButton().click();
-    }
-
     public void clickAdministrationButton() {
         getAdministrationButton().click();
     }
@@ -88,9 +84,6 @@ public class DashboardPage extends BasePage {
         getConfirmDeleteProjectButton().click();
     }
 
-    public void clickAddTestSuiteButton() {
-        getAddTestSuiteButton().click();
-    }
 
 
     public SelenideElement getIconHeaderMail() {

@@ -5,6 +5,7 @@ import pages.AddProjectPage;
 
 public class DashboardStep extends BaseStep {
     public AddProjectPage successAddProject() {
+
         addProject();
         return addProjectPage;
     }

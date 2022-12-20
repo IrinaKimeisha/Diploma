@@ -4,7 +4,6 @@ package baseEntities;
 import pages.*;
 
 public class BaseStep {
-    //ничего не менять
     protected LoginPage loginPage;
     protected DashboardPage dashboardPage;
     protected AddProjectPage addProjectPage;

@@ -8,6 +8,7 @@ import lombok.Data;
 @Builder
 public class Project {
     private String name;
+
     private String announcement;
 
     @SerializedName(value = "show_announcement")

@@ -16,7 +16,6 @@ public abstract class BaseTest {
     protected NavigationStep navigationStep;
     protected DashboardStep dashboardStep;
     protected AddProjectStep addProjectStep;
-
     protected LoginPage loginPage;
     protected DashboardPage dashboardPage;
 

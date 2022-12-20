@@ -47,4 +47,5 @@ public class SuitsApiTests extends BaseApiTest {
                 .log().body()
                 .statusCode(HttpStatus.SC_OK);
     }
+
 }

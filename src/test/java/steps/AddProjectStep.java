@@ -5,8 +5,6 @@ import pages.ProjectOverviewPage;
 
 public class AddProjectStep extends BaseStep {
 
-    //ничего не менять
-
     public void fillProject(String projectName, String announcement, boolean announcementCheckBoxButton,
                             String suiteMode, boolean projectCompletedCheckBoxButton) {
         addProjectPage.getNameInputLocator().sendKeys(projectName);

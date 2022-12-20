@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class AddProjectPage extends BasePage {
-    // ничего не менять
+
     // локаторы
     private SelenideElement pageIdentifier = $x("//div[contains(text(),'Add Project')]");
     private SelenideElement nameInputLocator = $("input.form-control#name");
